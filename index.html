@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <title>Jimmy’s Diner</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1 class="title">Jimmy’s Diner</h1>
+                <p class="title-desc">The best burgers and pizzas in town.</p>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <section class="menu-items" id="menu-items-element"></section>
+                <section class="checkout hidden" id="checkout-element">
+                    <h2 class="checkout-title">Your order</h2>
+                    <div class="checkout-items" id="checkout-items-element">
+                    </div>
+                    <div class="checkout-total-price">
+                        <h2>Total price:</h2>
+                        <p class="price-tag margin-left-auto" id="total-price">$14</p>
+                    </div>
+                    <button class="btn" id="purchase-btn">Complete order</button>
+                </section>
+            </div>
+        </main>
+        <div class="modal customer-info-modal hidden" id="info-modal">
+                <form class="modal-form" id="modal-form-el">
+                    <h2 class="modal-title">Enter card details</h2>
+                    <input 
+                    type="text"  
+                    placeholder="Enter your name" 
+                    name="fullName"
+                    required
+                    >
+                    <input 
+                    type="number" 
+                    placeholder="Enter card number" 
+                    id="card-number-input" 
+                    required>
+                    <input 
+                    type="number" 
+                    max="999" 
+                    min="0" 
+                    placeholder="Enter CVV" 
+                    id="cvv-input" 
+                    required>
+                    <button class="btn" id="pay-btn"> Pay </button>
+                </form>
+        </div>
+        <div class="modal review-modal hidden" id="review-modal-element">
+            <h2 class="review-title">Rate Your Experience !</h2>
+            <div class="stars">
+                <i class="fa-solid fa-star fa-2xl" id="star-element"></i>
+                <i class="fa-solid fa-star fa-2xl" id="star-element"></i>
+                <i class="fa-solid fa-star fa-2xl" id="star-element"></i>
+                <i class="fa-solid fa-star fa-2xl" id="star-element"></i>
+                <i class="fa-solid fa-star fa-2xl" id="star-element"></i>
+            </div>
+        </div>
+	<script src="index.js" type="module"></script>
+    </body>
+</html>
+
